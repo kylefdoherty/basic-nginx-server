@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - ./static.conf:/etc/nginx/conf.d/static.conf
+      - ./index.html:/data/www/index.html
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+
